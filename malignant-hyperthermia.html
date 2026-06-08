@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuromuscular Disorders and Other Genetic Disorders — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="malignant-hyperthermia">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 31</span><span class="meta-tag">pharmacology</span><span class="meta-tag">critical-care</span><span class="meta-tag">miller-ch31</span></div>
+    <h1 id="neuromuscular-disorders-and-other-genetic-disorders">Neuromuscular Disorders and Other Genetic Disorders</h1>
+<h2 id="malignant-hyperthermia-mh">惡性高熱（Malignant Hyperthermia, MH）</h2>
+<h3 id="_1">定義與遺傳</h3>
+<p>MH 是一種<strong>骨骼肌高代謝危象</strong>，由吸入麻醉藥（halothane、sevoflurane、desflurane、isoflurane 等所有鹵化揮發性麻醉藥）或 <strong>succinylcholine</strong> 觸發。</p>
+<p><strong>遺傳基礎</strong>：
+- <strong>RYR1</strong>（ryanodine receptor 1）基因突變是最常見缺陷，佔 50–80% MH 患者及其家屬
+- 常染色體顯性遺傳</p>
+<h3 id="_2">發生率</h3>
+<ul>
+<li>所有麻醉：1/250,000</li>
+<li>使用鹵化吸入麻醉藥 + succinylcholine：<strong>1/60,000</strong>（風險顯著上升）</li>
+</ul>
+<h3 id="_3">臨床表現（早期至晚期）</h3>
+<p><strong>早期徵象：</strong>
+- ↑ ETCO₂（最早且最敏感的指標）
+- 心搏過速
+- 肌肉強直（尤其是咀嚼肌）</p>
+<p><strong>晚期徵象：</strong>
+- <strong>體溫急速上升</strong>（可達 1°C / 5 分鐘）
+- 嚴重代謝性酸血症
+- 橫紋肌溶解症（rhabdomyolysis）
+- 高鉀血症、心律不整</p>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p>ETCO₂ 上升是 MH 最早的客觀徵象，早於體溫上升。任何無法解釋的 ETCO₂ 上升或心搏過速都應列入 MH 鑑別診斷。</p></div></div>
+<h3 id="_4">死亡率</h3>
+<ul>
+<li>歷史死亡率：60%</li>
+<li>使用 dantrolene 後：<strong>&lt; 1.4%</strong></li>
+</ul>
+<h3 id="_5">治療原則</h3>
+<ol>
+<li><strong>立即停用所有誘發劑</strong>（所有鹵化揮發麻醉藥、succinylcholine）</li>
+<li>過度換氣，100% O₂</li>
+<li><strong>Dantrolene</strong>：2.5 mg/kg IV，重複給予至症狀緩解（最高可達 10 mg/kg）</li>
+<li>冷卻（降溫措施）</li>
+<li>治療高鉀、酸血症、心律不整</li>
+<li>監測尿量（防止腎衰）、凝血功能（防 DIC）</li>
+</ol>
+<div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> 注意事項</div><div class="callout-body"><p>Dantrolene 需溶解於注射用水，且每瓶 20 mg 溶解緩慢——應召集多人同時混藥，以確保快速給予足量。</p></div></div>
+<h2 id="_6">相關頁面</h2>
+<ul>
+<li><a href="./neuromuscular-blockade-reversal.html" class="wiki-link">neuromuscular-blockade-reversal</a></li>
+<li><a href="./inhaled-anesthetics-mechanisms.html" class="wiki-link">inhaled-anesthetics-mechanisms</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

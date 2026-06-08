@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Anesthesia — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="pediatric-airway-lma">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 72</span><span class="meta-tag">pediatric</span><span class="meta-tag">airway</span><span class="meta-tag">miller-ch72</span></div>
+    <h1 id="pediatric-anesthesia">Pediatric Anesthesia</h1>
+<h2 id="lma">LMA 尺寸選擇（體重對照）</h2>
+<table>
+<thead>
+<tr>
+<th>LMA 尺寸</th>
+<th>患者體重（kg）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>最多 5 kg（新生兒）</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>5–10 kg</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10–20 kg</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>20–30 kg</td>
+</tr>
+<tr>
+<td>3</td>
+<td>30–50 kg</td>
+</tr>
+<tr>
+<td>4</td>
+<td>50–70 kg</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uri">兒童上呼吸道感染（URI）與麻醉時機</h2>
+<p>兒童感冒時的麻醉決策依病情嚴重程度分類：</p>
+<pre><div class="mermaid">flowchart TD
+    A[兒童感冒就診] --&gt; B{術前評估}
+    B --&gt; C[輕度感冒\n流鼻水、乾咳、鼻塞]
+    B --&gt; D[中度感冒\n流鼻水、多痰、膿性分泌物]
+    B --&gt; E[重度感冒\n喘鳴、多量咳嗽、發燒、倦怠]
+    C --&gt; F[評估風險效益比\n繼續進行 or 延後]
+    D --&gt; F
+    E --&gt; G[延後 ≥2 週\n重新評估]
+    F --&gt; H{繼續手術}
+    H --&gt; I[麻醉管理\n• 避免氣管內插管\n• 使用 LMA\n• 術前 salbutamol]
+    H --&gt; J[延後 ≥2 週]
+</div></pre>
+<p><strong>風險因子（傾向延後）：</strong>
+- 年齡 &lt; 1 歲
+- 被動吸二手菸
+- 肺部共病
+- 氣道手術（ENT 手術除外）
+- 需要氣管內插管</p>
+<p><strong>效益因子（傾向繼續）：</strong>
+- ENT 手術（腺樣體/扁桃體切除術），有明確感染性病灶指徵
+- 麻醉科具有處理感冒兒童的豐富經驗
+- 家長理解並配合</p>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>輕度 URI 的兒童若需繼續手術，優先使用 <strong>LMA 而非氣管內插管</strong>，並考慮術前 salbutamol 吸入治療。重度 URI（發燒、膿性分泌物、喘鳴）應常規延後 2 週。</p></div></div>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li><span class="wiki-link-broken" title="未建立：airway-management">airway-management</span></li>
+<li><a href="./perioperative-pulmonary-risk.html" class="wiki-link">perioperative-pulmonary-risk</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

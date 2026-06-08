@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anesthesia for Robotic Surgery — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="laparoscopic-surgery-anesthesia">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 67</span><span class="meta-tag">physiology</span><span class="meta-tag">critical-care</span><span class="meta-tag">miller-ch67</span></div>
+    <h1 id="anesthesia-for-robotic-surgery">Anesthesia for Robotic Surgery</h1>
+<h2 id="_1">腹腔鏡手術的血流動力學變化</h2>
+<p>腹腔鏡手術分四個階段，各階段血流動力學特徵不同：</p>
+<pre><div class="mermaid">flowchart LR
+    A[麻醉誘導] --&gt; B[腹腔充氣\nAbdominal Insufflation]
+    B --&gt; C[腹腔排氣\nAbdominal Desufflation]
+    C --&gt; D[麻醉恢復]
+</div></pre>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>HR</th>
+<th>MAP</th>
+<th>SVR</th>
+<th>RAP</th>
+<th>PCWP</th>
+<th>CO/CI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>麻醉誘導</td>
+<td>—</td>
+<td>↓</td>
+<td>↓</td>
+<td>—</td>
+<td>—</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>腹腔充氣（CO₂ 氣腹）</td>
+<td>↔</td>
+<td>↑</td>
+<td>↑</td>
+<td>↑</td>
+<td>↑</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>腹腔排氣</td>
+<td>↔/↑</td>
+<td>↓</td>
+<td>↓</td>
+<td>↓</td>
+<td>—</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>麻醉恢復</td>
+<td>↑</td>
+<td>↑</td>
+<td>↑</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p>CO₂ 氣腹充氣後：腹內壓增加 → 靜脈回流受阻 + 腸系膜血管床受壓 → <strong>CO 下降</strong>；同時腹主動脈受壓 + CO₂ 吸收 → <strong>MAP 與 SVR 上升</strong>。此組合使已有心功能障礙的患者風險增加。</p></div></div>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>PEEP 使用可增加 RAP 到 pulmonary wedge pressure 的正壓梯度，配合大量補液（2800 mL vs 1220 mL）可使該梯度下降。腹腔鏡手術中的補液策略需平衡氣腹引起的靜脈回流障礙。</p></div></div>
+<h2 id="_2">相關頁面</h2>
+<ul>
+<li><a href="./anesthesia-for-bariatric-surgery.html" class="wiki-link">anesthesia-for-bariatric-surgery</a></li>
+<li><a href="./perioperative-pulmonary-risk.html" class="wiki-link">perioperative-pulmonary-risk</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

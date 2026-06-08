@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intravenous Anesthetics — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="ketamine">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">entity</span><span class="meta-miller">Miller Ch. 21</span><span class="meta-tag">pharmacology</span><span class="meta-tag">miller-ch21</span></div>
+    <h1 id="intravenous-anesthetics">Intravenous Anesthetics</h1>
+<h2 id="_1">作用機轉</h2>
+<p>Ketamine 是 phencyclidine 衍生物，主要（但不完全）作用於 <strong>N-methyl-D-aspartate（NMDA）receptor</strong> 拮抗，產生<strong>解離性麻醉</strong>（dissociative anesthesia）：意識分離、鎮痛、遺忘三者同時發生，同時保留保護性呼吸道反射。</p>
+<h2 id="_2">臨床特性</h2>
+<ul>
+<li><strong>適應症</strong>：麻醉誘導與維持、創傷患者（低血壓或血流動力學不穩定）、支氣管痙攣患者、程序性鎮靜</li>
+<li><strong>優點</strong>：交感神經興奮 → 心跳加速、血壓上升；支氣管擴張；不抑制呼吸驅動（低劑量）</li>
+<li><strong>缺點</strong>：幻覺、夢境（emergence delirium）；增加唾液分泌；顱內壓升高（傳統觀念，但現代文獻有爭議）</li>
+</ul>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>Ketamine 的交感神經興奮效應使其成為低血壓或低血容量患者麻醉誘導的優選之一，但對兒茶酚胺耗竭的患者（如終末期心衰），心臟直接抑制效果可能反而造成血壓下降。</p></div></div>
+<h2 id="_3">藥物交互作用（麻醉藥相互作用矩陣）</h2>
+<p>麻醉藥之間的相互作用可分為三類：</p>
+<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>說明</th>
+<th>顏色標記</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Synergy（協同）</strong></td>
+<td>合併效果大於各自相加</td>
+<td>綠色</td>
+</tr>
+<tr>
+<td><strong>Additivity（加成）</strong></td>
+<td>效果等於各自相加</td>
+<td>灰色</td>
+</tr>
+<tr>
+<td><strong>Infra-additivity（拮抗）</strong></td>
+<td>合併效果小於各自相加</td>
+<td>紅色</td>
+</tr>
+</tbody>
+</table>
+<p>重要配對：GABA 藥物（propofol、吸入麻醉藥）相互之間多為 synergy 或 additivity；NMDA 拮抗藥（ketamine、N₂O）與 GABA 藥物之間常顯示 additivity，部分組合顯示 infra-additivity。</p>
+<h2 id="_4">相關頁面</h2>
+<ul>
+<li>[[inh</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

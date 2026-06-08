@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anesthesia for Orthopedic Surgery — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="scoliosis-neuromonitoring">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 60</span><span class="meta-tag">neuro</span><span class="meta-tag">miller-ch60</span></div>
+    <h1 id="anesthesia-for-orthopedic-surgery">Anesthesia for Orthopedic Surgery</h1>
+<h2 id="_1">脊椎側彎矯正術的神經電生理監測</h2>
+<table>
+<thead>
+<tr>
+<th>監測方式</th>
+<th>臨床應用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSEP</strong>（體感誘發電位）</td>
+<td>推薦使用；可取代 wake-up test，連續監測</td>
+</tr>
+<tr>
+<td><strong>Wake-up test</strong></td>
+<td>在使用電生理監測的中心已大多廢棄；監測不連續，有假陰性報告</td>
+</tr>
+<tr>
+<td><strong>tcMEP</strong>（經顱運動誘發電位）</td>
+<td>自 FDA 核准經顱電刺激後臨床使用增加；與 SSEP 合併使用效果最佳</td>
+</tr>
+<tr>
+<td><strong>EMG</strong></td>
+<td>偵測神經根損傷的效用有限</td>
+</tr>
+<tr>
+<td><strong>Triggered EMG</strong></td>
+<td>部分中心用於 pedicle screw 放置時的確認</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p>SSEP 監測脊髓的後柱（感覺路徑）；tcMEP 監測前柱（運動路徑）。<strong>兩者合用</strong>才能全面保護脊髓功能。單純使用 SSEP 可能漏診前索損傷（anterior cord syndrome）。</p></div></div>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>進行 tcMEP 監測時，應避免使用會抑制 MEP 振幅的麻醉藥：吸入麻醉藥對 MEP 的抑制呈劑量依賴性，高濃度（&gt;0.5 MAC）顯著抑制；TIVA（全靜脈麻醉，propofol + opioid）對 MEP 影響最小，為脊椎側彎手術的首選麻醉方式。</p></div></div>
+<h2 id="_2">相關頁面</h2>
+<ul>
+<li><a href="./monitoring-brain-response.html" class="wiki-link">monitoring-brain-response</a></li>
+<li><a href="./neurocritical-care-sah.html" class="wiki-link">neurocritical-care-sah</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

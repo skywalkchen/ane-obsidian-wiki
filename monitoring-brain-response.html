@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring the Brain's Response to Anesthesia and Surgery — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="monitoring-brain-response">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 36</span><span class="meta-tag">neuro</span><span class="meta-tag">physiology</span><span class="meta-tag">miller-ch36</span></div>
+    <h1 id="monitoring-the-brains-response-to-anesthesia-and-surgery">Monitoring the Brain's Response to Anesthesia and Surgery</h1>
+<h2 id="eeg">全身麻醉誘導時的腦電圖（EEG）變化</h2>
+<p>使用作用於 GABA 接受器的麻醉藥物（如 Propofol 或吸入性麻醉藥）進行全身麻醉誘導時，病患從清醒過渡到手術麻醉狀態，前額葉的 EEG 會呈現特徵性的振幅與頻率變化：</p>
+<h3 id="1-awake-state">1. 清醒狀態（Awake State）</h3>
+<ul>
+<li><strong>特徵</strong>：小振幅（small-amplitude）、高頻率（high-frequency）的活性，振幅約為 <strong>5 至 10 μV</strong>。</li>
+<li><strong>干擾</strong>：常夾雜眨眼、頭部運動及肌肉活動所產生的偽影（artifacts）。</li>
+</ul>
+<h3 id="2-mild-sedation-excitatory-phase">2. 輕度鎮靜 / 興奮期（Mild Sedation / Excitatory Phase）</h3>
+<ul>
+<li><strong>特徵</strong>：出現 <strong>Beta 頻段</strong>（約 <strong>12–30 Hz</strong>，主要集中在 <strong>15–25 Hz</strong>）的震盪，臨床上稱為「<strong>Beta buzz</strong>」。這通常代表大腦處於興奮期（excitatory phase）。</li>
+</ul>
+<h3 id="3-loss-of-responsiveness">3. 意識喪失（Loss of Responsiveness）</h3>
+<ul>
+<li><strong>特徵</strong>：原本閉眼時出現在枕葉（occipital area）的 <strong>Alpha 震盪（8–12 Hz）</strong> 會消失，取而代之的是在前額葉（frontal area）出現明顯的 Alpha 頻段活性。</li>
+<li><strong>臨床現象</strong>：此現象稱為「<strong>前額化現象</strong>（<strong>Anteriorization</strong>）」。</li>
+</ul>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 前額化現象 (Anteriorization)</div><div class="callout-body"><p>當病患因 GABA 門控型藥物喪失意識時，原本位於枕葉（後腦）的 Alpha 活性會向前轉移，在前額葉（前腦）顯現。這是判斷大腦進入麻醉狀態的關鍵電生理指標之一。</p></div></div>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li>（詳見 <a href="./cerebral-physiology.html" class="wiki-link">Cerebral Physiology and the Effects of Anesthetic Drugs</a>）</li>
+</ul>
+<h2 id="_2">來源</h2>
+<p><img src="../raw/images/螢幕擷取畫面 2025-04-04 162300.png" alt="螢幕擷取畫面 2025-04-04 162300.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<div class="callout callout-quote" style="background:#f3e5f5;border-left:4px solid #6a1b9a"><div class="callout-title" style="color:#6a1b9a"><span class="callout-icon">📝</span> Quote</div><div class="callout-body"><p>When general anesthesia is induced in a patient using a GABA-ergic anesthetic (such as propofol or volatile agents)... When responsiveness is lost, the alpha oscillation present at occipital areas when eyes are closed disappears, and activity in the alpha frequency range (8–12 Hz) becomes visible in frontal areas—the so-called "anteriorization" phenomenon.
+— Miller's Anesthesia 10e, Ch. 36 (Source: <code>raw/images/螢幕擷取畫面 2025-04-04 162300.png</code>)</p></div></div>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>
