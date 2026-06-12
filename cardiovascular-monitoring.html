@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardiovascular Monitoring — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="cardiovascular-monitoring">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 32</span><span class="meta-tag">cardiac</span><span class="meta-tag">critical-care</span><span class="meta-tag">physiology</span><span class="meta-tag">miller-ch32</span></div>
+    <h1 id="cardiovascular-monitoring">Cardiovascular Monitoring</h1>
+<h2 id="west-zones">肺動脈導管楔壓與 West Zones</h2>
+<p>肺動脈導管（pulmonary artery catheter, PAC）楔壓（pulmonary capillary wedge pressure, PCWP）只有在導管尖端位於<strong>肺血流靜水壓最高、肺泡壓不會壓迫肺微血管的區域</strong>時，才能準確反映<strong>肺靜脈壓（Pv）/ 左心房壓（LA）</strong>。此條件由 West 肺區（West zones）決定，三區由肺泡壓（Pᴀ）、肺動脈壓（Pa）、肺靜脈壓（Pv）的相對大小區分：</p>
+<table>
+<thead>
+<tr>
+<th>West Zone</th>
+<th>壓力關係</th>
+<th>微血管狀態</th>
+<th>楔壓意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zone 1</strong></td>
+<td>Pᴀ &gt; Pa &gt; Pv</td>
+<td>肺泡壓壓垮微血管，無血流</td>
+<td>反映<strong>肺泡壓</strong>，非血管內壓（不可靠）</td>
+</tr>
+<tr>
+<td><strong>Zone 2</strong></td>
+<td>Pa &gt; Pᴀ &gt; Pv</td>
+<td>血流受肺泡壓間斷影響</td>
+<td>部分受肺泡壓干擾</td>
+</tr>
+<tr>
+<td><strong>Zone 3</strong></td>
+<td>Pa &gt; Pv &gt; Pᴀ</td>
+<td>血流連續，微血管全程開放</td>
+<td><strong>準確反映 Pv / LA 壓</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p><strong>PAC 尖端必須位於 Zone 3</strong> 才能準確測量肺靜脈/左心房壓。導管多會隨血流漂向血流量最大的 Zone 3（肺下垂部位），但在以下情況可能落入 Zone 1/2 而高估楔壓：<strong>高 PEEP、低血容量、低心輸出量</strong>（這些情況使肺泡壓相對升高或血管內壓下降，擴大 Zone 1/2 範圍）。</p></div></div>
+<p><img src="../raw/images/螢幕擷取畫面 2026-06-11 145805.png" alt="螢幕擷取畫面 2026-06-11 145805.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>若楔壓波形隨呼吸週期大幅變動、或楔壓 &gt; 肺動脈舒張壓，應懷疑導管不在 Zone 3（如 Zone 1/2 或受高 PEEP 影響），所測數值不可信。</p></div></div>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li><a href="./perioperative-echocardiography-and-pocus.html" class="wiki-link">perioperative-echocardiography-and-pocus</a></li>
+<li><a href="./pulmonary-hypertension-anesthesia.html" class="wiki-link">pulmonary-hypertension-anesthesia</a></li>
+<li><a href="./valve-disease-anesthesia-management.html" class="wiki-link">valve-disease-anesthesia-management</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

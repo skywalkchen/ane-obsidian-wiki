@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacology of Neuromuscular Blocking Drugs and Antagonists (Reversal Agents) — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="nmbd-pharmacokinetics">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">note</span><span class="meta-miller">Miller Ch. 24</span><span class="meta-tag">note</span><span class="meta-tag">pharmacology</span><span class="meta-tag">miller-ch24</span></div>
+    <h1 id="pharmacology-of-neuromuscular-blocking-drugs-and-antagonists-reversal-agents">Pharmacology of Neuromuscular Blocking Drugs and Antagonists (Reversal Agents)</h1>
+<div class="callout callout-abstract" style="background:#e0f7fa;border-left:4px solid #006064"><div class="callout-title" style="color:#006064"><span class="callout-icon">📋</span> 摘要</div><div class="callout-body"><p>NMBD 的兩大臨床參數 <strong>onset（起效時間）</strong> 與 <strong>duration（作用持續時間）</strong> 由不同機制決定，且各自隱藏一個「反直覺」陷阱：效價越強 onset 反而越慢（buffered diffusion）；terminal half-life 並非 duration 的主要決定因素（再分佈相主導中效藥恢復）。本頁整理自個人藥動學講義（<code>raw/notes/NMBD_pharmacokinetics_lecture.md</code>）。NMJ 受體佔用門檻與突觸前機制見 [[neuromuscular-physiology-and-pharmacology]]。</p></div></div>
+<h2 id="onset">Onset：效價與起效時間的反比關係</h2>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 核心反直覺</div><div class="callout-body"><p><strong>效價越高（ED₉₅ 越低），onset 反而越慢。</strong></p></div></div>
+<table>
+<thead>
+<tr>
+<th>效價</th>
+<th>代表藥</th>
+<th>ED₉₅ (mg/kg)</th>
+<th>Onset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低效價</td>
+<td>Rocuronium</td>
+<td>~0.3</td>
+<td>快</td>
+</tr>
+<tr>
+<td>低效價</td>
+<td>Succinylcholine</td>
+<td>~0.3</td>
+<td>快</td>
+</tr>
+<tr>
+<td>中效價</td>
+<td>Atracurium</td>
+<td>~0.25</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>高效價</td>
+<td>Vecuronium</td>
+<td>~0.05</td>
+<td>較慢</td>
+</tr>
+<tr>
+<td>高效價</td>
+<td>Cisatracurium</td>
+<td>~0.05</td>
+<td>慢</td>
+</tr>
+</tbody>
+</table>
+<p><strong>機制</strong>：臨床給藥劑量決定抵達 NMJ 的<strong>分子數</strong>。低效價藥給藥量多 → 血漿分子多 → 擴散至效應室分子多 → NMJ 濃度快速上升 → 快速達 90% 受體佔用。一旦到達效應室，所有藥物的 binding kinetics 基本相同；差異在於<strong>抵達的分子數量</strong>，而非到達後的效率。</p>
+<h2 id="buffered-diffusion">Buffered Diffusion：強效藥的關鍵機制</h2>
+<p>高效價 NMBD 與受體<strong>緊密結合（高親和力）</strong>，解離後立即被鄰近受體再次捕捉，分子被「困」在 NMJ 附近反覆結合/解離、難以自由擴散離開。</p>
+<table>
+<thead>
+<tr>
+<th>效應方向</th>
+<th>機制</th>
+<th>臨床結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration 延長</strong></td>
+<td>藥物滯留 NMJ，回血漿速度慢</td>
+<td>作用時間延長</td>
+</tr>
+<tr>
+<td><strong>Onset 變慢</strong></td>
+<td>分子數少 + 被受體分散佔用，整體佔用率累積慢</td>
+<td>起效較慢</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 教學重點</div><div class="callout-body"><p>Buffered diffusion 同時解釋「cisatracurium 為何比 atracurium onset 慢」與「高效價藥 duration 為何相對較長」。臨床印證：同為 2× ED₉₅，atracurium 0.5 mg/kg onset ~3.2 min、cisatracurium 0.1 mg/kg onset 5.2–7.7 min，但兩者 duration 幾乎相同（~45 min）。</p></div></div>
+<h2 id="onset_1">其他影響 Onset 的因素</h2>
+<ul>
+<li><strong>肌肉血流（最重要的物理限制）</strong>：Ke0 ≈ 肌肉血流 ÷ NMJ/血漿分配係數。嬰幼兒血流高 → onset 快；老年、低心輸出量（心衰、休克）→ 所有 NMBD 及拮抗劑 onset 均延遲。</li>
+<li><strong>肌肉距中央循環遠近</strong>：膈肌、喉肌靠近心臟 → onset 快且較不敏感；adductor pollicis（肢端）onset 慢，為臨床監測標準位置。</li>
+<li><strong>Mivacurium 特例</strong>：部分藥物在抵達 NMJ 前即被血漿假性膽鹼酯酶水解 → onset 延遲（<strong>代謝競爭機制，非效價機制</strong>）。</li>
+<li><strong>血漿—效應室時間差</strong>：動脈血漿濃度峰值在給藥後 25–35 秒，但神經肌肉阻斷出現於 60–180 秒後 → 血漿濃度不能直接反映效應室濃度。</li>
+</ul>
+<h2 id="onset_2">劑量與 Onset 的關係</h2>
+<table>
+<thead>
+<tr>
+<th>劑量情況</th>
+<th>Onset 與劑量關係</th>
+<th>臨床意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未達完全阻斷（次癱瘓劑量）</td>
+<td><strong>無關</strong>（Tpeak 與劑量無關，劑量只影響阻斷深度）</td>
+<td>調整劑量不改變 intubation 時機</td>
+</tr>
+<tr>
+<td>達完全阻斷範圍</td>
+<td><strong>劑量↑ → onset↑</strong>（更早越過完全阻斷門檻）</td>
+<td>想加快 onset 須給足量甚至高劑量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="duration-half-life">Duration：不是 half-life 決定一切</h2>
+<div class="callout callout-warning" style="background:#fff8e1;border-left:4px solid #e65100"><div class="callout-title" style="color:#e65100"><span class="callout-icon">⚠️</span> 常見誤解</div><div class="callout-body"><p>「Terminal half-life 越長 → duration 越長」是<strong>錯誤</strong>的。Duration 取決於「血漿濃度何時降到 NMJ 恢復閾值」，而非 terminal half-life 本身。</p></div></div>
+<p>血漿濃度下降分兩階段：<strong>再分佈相</strong>（藥物由血漿分散至周邊組織，濃度快速↓ → 中效藥在此階段即完成恢復）與<strong>消除相</strong>（依賴肝腎代謝/排泄或 Hofmann，濃度下降變慢 → 長效藥恢復發生於此）。</p>
+<p><strong>中效藥的經典矛盾</strong>：atracurium（terminal t½ ~20 min）、vecuronium / rocuronium（60–120 min）terminal half-life 差 3–6 倍，臨床 duration 卻相近（~30–60 min）——因為恢復在再分佈相即完成，terminal half-life 根本未輪到主導。</p>
+<h2 id="duration">效價、Duration、消除機制的三角關係</h2>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 第二個反直覺</div><div class="callout-body"><p>效價（potency，反映受體親和力 / ED₉₅）與 duration 是<strong>完全獨立</strong>的兩個維度。效價最強的 vecuronium 是中效藥，效價中等的 mivacurium 卻是最短效的非去極化藥。</p></div></div>
+<table>
+<thead>
+<tr>
+<th>藥物</th>
+<th>效價</th>
+<th>Duration</th>
+<th>消除機制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vecuronium</td>
+<td>最強群</td>
+<td>中效</td>
+<td>肝代謝 + 膽汁排泄</td>
+</tr>
+<tr>
+<td>Cisatracurium</td>
+<td>最強群</td>
+<td>中效</td>
+<td>Hofmann elimination（自發分解）</td>
+</tr>
+<tr>
+<td>Pancuronium</td>
+<td>中強</td>
+<td><strong>長效</strong></td>
+<td>腎排泄為主（~70% 原型），代謝緩慢</td>
+</tr>
+<tr>
+<td>Mivacurium</td>
+<td>中</td>
+<td><strong>短效</strong></td>
+<td>假性膽鹼酯酶快速水解</td>
+</tr>
+<tr>
+<td>Atracurium</td>
+<td>中弱</td>
+<td>中效</td>
+<td>Hofmann + 酯水解</td>
+</tr>
+<tr>
+<td>Rocuronium</td>
+<td>弱</td>
+<td>中效</td>
+<td>肝代謝</td>
+</tr>
+<tr>
+<td>Tubocurarine</td>
+<td>最弱</td>
+<td><strong>長效</strong></td>
+<td>腎排泄，幾乎不代謝</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Duration 決定因素層級</strong>：第一層（最重要）消除途徑速率——假性膽鹼酯酶水解（極快，short）&gt; Hofmann/酯水解、肝代謝（中等，intermediate）&gt; 腎排泄（慢，long）；第二層再分佈速率（中效藥主角）；第三層 buffered diffusion（高效價藥額外延長，但被第一層蓋過）。</p>
+<div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> 臨床警示：假性膽鹼酯酶缺乏</div><div class="callout-body"><p>遺傳變異、肝病、妊娠、抗膽鹼酯酶藥物 → <strong>mivacurium 及 succinylcholine duration 戲劇性延長</strong>，可能需長時間機械通氣。</p></div></div>
+<h2 id="_1">臨床數據解讀（重點摘錄）</h2>
+<ul>
+<li><strong>Rocuronium 劑量遞增</strong>（isoflurane）：0.6 → 0.9 → 1.2 mg/kg，onset 1.7 → 1.3 → 0.9 min（加快），duration 36 → 53 → 73 min（延長）——印證「完全阻斷範圍內劑量↑ → onset↑ 但 duration 同步延長」。可搭配 sugammadex 逆轉 duration 代價。</li>
+<li><strong>Cisatracurium 劑量遞增</strong>：0.1（2×）→ 0.2（4×）→ 0.4（8×）mg/kg，onset 5.2–7.7 → 2.7 → 1.9 min，duration 45 → 68 → 91 min。高劑量可追上 atracurium 的 onset，代價是 duration 約翻倍。</li>
+<li><strong>Succinylcholine</strong>：即使 1.7× ED₉₅ 低倍數，onset 已以秒計（去極化機制獨特）；duration 隨劑量延長並受吸入麻醉藥影響。</li>
+<li><strong>Pancuronium onset 悖論</strong>：高效價長效藥，1.3× ED₉₅ 即 ~2.9 min onset，但 duration 長達 86 min（terminal half-life 主導）。</li>
+</ul>
+<h2 id="cisatracurium-onset">整合臨床思考：腎衰竭患者加快 Cisatracurium onset</h2>
+<p>高劑量（8× ED₉₅, 0.4 mg/kg）可將 onset 縮短至 1.9 min；Hofmann elimination 不依賴肝腎，腎衰竭患者理論上最安全，但 duration 固定延長至 ~91 min 且不可隨時逆轉。若需<strong>靈活控制 duration</strong>，<strong>rocuronium + sugammadex</strong> 仍為主流選擇（onset ~1 min、可隨時逆轉），代價為輕度腎臟依賴與較高成本。</p>
+<h2 id="_2">核心記憶口訣</h2>
+<div class="callout callout-quote" style="background:#f3e5f5;border-left:4px solid #6a1b9a"><div class="callout-title" style="color:#6a1b9a"><span class="callout-icon">📝</span> Quote</div><div class="callout-body"><p>「效強量少起效慢，量少留困久不散；量多越門檻早到，但換來的是久久不走。」
+— <code>raw/notes/NMBD_pharmacokinetics_lecture.md</code></p>
+<p>效強量少起效慢 → 高效價藥 onset 慢；量少留困久不散 → buffered diffusion 延長 duration；量多越門檻早到 → 高劑量加快 onset；久久不走 → 高劑量代價是 duration 延長。</p></div></div>
+<div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 定義</div><div class="callout-body"><p>本講義之 Clinical Duration = 從給藥至 TOF 恢復 25% 的時間。</p></div></div>
+<h2 id="_3">相關頁面</h2>
+<ul>
+<li><a href="./neuromuscular-physiology-and-pharmacology.html" class="wiki-link">neuromuscular-physiology-and-pharmacology</a> — NMJ 安全邊際、突觸前 fade 機制</li>
+<li><a href="./neuromuscular-blockade-reversal.html" class="wiki-link">neuromuscular-blockade-reversal</a> — TOF 監測與拮抗藥</li>
+<li><a href="./acute-kidney-injury-criteria.html" class="wiki-link">acute-kidney-injury-criteria</a> — 肝腎功能對肌鬆藥選擇的影響（cisatracurium 首選）</li>
+<li><a href="./malignant-hyperthermia.html" class="wiki-link">malignant-hyperthermia</a> — succinylcholine 禁忌</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>
