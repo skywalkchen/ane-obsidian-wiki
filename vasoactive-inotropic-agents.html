@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critical Care Anesthesiology — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="vasoactive-inotropic-agents">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 79</span><span class="meta-tag">critical-care</span><span class="meta-tag">cardiac</span><span class="meta-tag">pharmacology</span><span class="meta-tag">miller-ch79</span></div>
+    <h1 id="critical-care-anesthesiology">Critical Care Anesthesiology</h1>
+<div class="callout callout-info" style="background:#e8f5e9;border-left:4px solid #1b5e20"><div class="callout-title" style="color:#1b5e20"><span class="callout-icon">ℹ️</span> 背景</div><div class="callout-body"><p>「Medical（pharmacological）circulatory support」指以血管活性與強心藥物維持灌流，與機械循環支持（IABP、Impella、ECMO）並列為 cardiogenic shock（CS）的處置主軸。選藥取決於目標：提升 <strong>SVR</strong>（升壓）、提升 <strong>CO</strong>（正性肌力）或降低後負荷（血管舒張）。詳見 [[sinha-2025-cardiogenic-shock]]。</p></div></div>
+<h2 id="_1">三大作用方向</h2>
+<pre><div class="mermaid">flowchart TD
+    A[循環衰竭 / 低灌流] --&gt; B{主要缺陷？}
+    B --&gt;|SVR 過低| C[Vasoconstriction]
+    B --&gt;|CO 過低| D[Positive inotropy]
+    B --&gt;|後負荷過高| E[Vasodilation]
+    C --&gt; C1[Vasopressin / Phenylephrine / Norepinephrine]
+    D --&gt; D1[Epinephrine / Dopamine / Dobutamine / Milrinone / Levosimendan]
+    E --&gt; E1[Nitroglycerin / Nitroprusside]
+</div></pre>
+<p><img src="../raw/images/20260613_105442.jpg" alt="20260613_105442.jpg" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<h2 id="_2">受體機轉與血流動力學摘要</h2>
+<table>
+<thead>
+<tr>
+<th>類別</th>
+<th>代表藥</th>
+<th>主要受體</th>
+<th>淨血流動力學</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inopressor</strong>（升壓兼強心）</td>
+<td>Norepinephrine、Epinephrine、Dopamine</td>
+<td>α₁ + β₁</td>
+<td>↑SVR、↑BP、↑CO</td>
+</tr>
+<tr>
+<td><strong>Inodilator</strong>（強心兼舒張）</td>
+<td>Dobutamine、Milrinone</td>
+<td>β₁ / PDE-3</td>
+<td>↑CO、↓SVR（注意低血壓）</td>
+</tr>
+<tr>
+<td><strong>Vasopressor</strong>（純升壓）</td>
+<td>Phenylephrine、Vasopressin</td>
+<td>α₁ / V1</td>
+<td>↑SVR、↑BP、CO 不變或↓</td>
+</tr>
+<tr>
+<td><strong>Vasodilator</strong>（降後負荷）</td>
+<td>Nitroprusside、Nitroglycerin</td>
+<td>NO</td>
+<td>↓SVR、↓BP</td>
+</tr>
+<tr>
+<td><strong>Chronotrope</strong>（增心率）</td>
+<td>Isoproterenol</td>
+<td>β₁β₂</td>
+<td>↑HR、↑CO、↓SVR</td>
+</tr>
+<tr>
+<td><strong>Inotrope</strong>（鈣敏化）</td>
+<td>Levosimendan</td>
+<td>troponin C</td>
+<td>↑CO、↓SVR</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p><strong>Dopamine 的劑量依賴效應</strong>：低劑量（2–5 µg/kg/min）以 D1 受體為主擴張腎／內臟血管；中劑量（5–10）β₁ 正性肌力；高劑量（10–20）α₁ 升壓。臨床上 CS 已不再常規使用「腎劑量 dopamine」保腎。</p></div></div>
+<div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> 注意事項</div><div class="callout-body"><ul>
+<li><strong>Inodilator（dobutamine、milrinone）</strong> 增加 CO 但降低 SVR，對已低血壓的 CS 患者可能需併用升壓藥。</li>
+<li><strong>Milrinone</strong> 經腎排除、半衰期長（~2–4 h），腎功能不全者作用延長且不易滴定。</li>
+<li><strong>Vasopressin</strong> 收縮體循環但相對不增加肺血管阻力，常用於右心衰竭／肺高壓情境（見 [[pulmonary-hypertension-anesthesia]]）。</li>
+<li><strong>Levosimendan</strong> 鈣敏化不增加心肌耗氧，但會降低 SVR，常見低血壓。</li>
+</ul></div></div>
+<h2 id="_3">相關頁面</h2>
+<ul>
+<li><a href="./sinha-2025-cardiogenic-shock.html" class="wiki-link">sinha-2025-cardiogenic-shock</a></li>
+<li><a href="./pulmonary-hypertension-anesthesia.html" class="wiki-link">pulmonary-hypertension-anesthesia</a></li>
+<li><a href="./cardiovascular-monitoring.html" class="wiki-link">cardiovascular-monitoring</a></li>
+<li><a href="./valve-disease-anesthesia-management.html" class="wiki-link">valve-disease-anesthesia-management</a></li>
+<li><a href="./critical-illness-polyneuropathy.html" class="wiki-link">critical-illness-polyneuropathy</a></li>
+<li><a href="./autonomic-nervous-system.html" class="wiki-link">autonomic-nervous-system</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>
