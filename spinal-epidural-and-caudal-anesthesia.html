@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinal, Epidural, and Caudal Anesthesia — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="spinal-epidural-and-caudal-anesthesia">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 41</span><span class="meta-tag">regional</span><span class="meta-tag">physiology</span><span class="meta-tag">miller-ch41</span></div>
+    <h1 id="spinal-epidural-and-caudal-anesthesia">Spinal, Epidural, and Caudal Anesthesia</h1>
+<h2 id="differential-block">差異性阻斷（Differential Block）</h2>
+<p>椎管內麻醉時，不同神經纖維對局部麻醉藥的敏感度不同，造成<strong>不同感覺型態的阻斷高度不一致</strong>，此現象稱為 <strong>differential sensory block</strong>。</p>
+<h3 id="_1">阻斷高度的階梯關係（由高至低）</h3>
+<pre><code>交感阻斷（冷覺消失）
+   ↓ 高 1–2 節
+針刺痛覺（pinprick）阻斷
+   ↓ 高 1–2 節
+觸覺（touch）阻斷
+</code></pre>
+<ul>
+<li><strong>冷覺（cold sensation）消失的高度</strong>最為<strong>頭側（cephalad）</strong>，可近似交感神經阻斷的高度</li>
+<li>冷覺阻斷平均比 <strong>針刺痛覺（pinprick）</strong> 高 <strong>1–2 個脊髓節段</strong></li>
+<li>針刺痛覺阻斷又比 <strong>觸覺（touch）</strong> 高 <strong>1–2 個節段</strong></li>
+</ul>
+<p>（詳見 image <code>raw/images/螢幕擷取畫面 2026-06-22 200613.png</code>）</p>
+<p><img src="../raw/images/螢幕擷取畫面 2026-06-22 200613.png" alt="螢幕擷取畫面 2026-06-22 200613.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>床邊評估時，以<strong>冷覺（酒精棉片）</strong>測得的阻斷高度，可近似估計<strong>交感阻斷</strong>的範圍，是預測低血壓風險與評估麻醉平面的實用方法。記憶順序：<strong>交感 &gt; 痛覺 &gt; 觸覺</strong>，每階差約 1–2 節。</p></div></div>
+<div class="callout callout-info" style="background:#e8f5e9;border-left:4px solid #1b5e20"><div class="callout-title" style="color:#1b5e20"><span class="callout-icon">ℹ️</span> 背景</div><div class="callout-body"><p>此差異源於纖維粗細與髓鞘化程度：細的、無髓鞘的交感（B 纖維）與痛覺（C / Aδ）纖維比粗的觸覺（Aβ）纖維更易被低濃度局麻藥阻斷。</p></div></div>
+<h2 id="_2">相關頁面</h2>
+<ul>
+<li><a href="./local-anesthetics.html" class="wiki-link">local-anesthetics</a> — 神經纖維分類與阻斷敏感度</li>
+<li><a href="./neuraxial-anesthesia-antithrombotic-timing.html" class="wiki-link">neuraxial-anesthesia-antithrombotic-timing</a> — 椎管內麻醉與抗血栓藥物時機</li>
+<li><a href="./preeclampsia-anesthesia.html" class="wiki-link">preeclampsia-anesthesia</a> — 產程鎮痛皮節覆蓋</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perioperative Fluid and Electrolyte Therapy — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="perioperative-fluid-and-electrolyte-therapy">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 43</span><span class="meta-tag">critical-care</span><span class="meta-tag">physiology</span><span class="meta-tag">obstetric</span><span class="meta-tag">miller-ch43</span></div>
+    <h1 id="perioperative-fluid-and-electrolyte-therapy">Perioperative Fluid and Electrolyte Therapy</h1>
+<h2 id="hypermagnesemia">高鎂血症（Hypermagnesemia）</h2>
+<p>由於胃腸道對 Mg²⁺ 吸收有限且腎臟排除效率高，<strong>高鎂血症通常為醫源性（iatrogenic）</strong>——最常見於子癇前症（preeclampsia）使用 MgSO₄ 治療，或腎功能不全患者。症狀反映 Mg²⁺ 對神經與心臟功能的抑制，並與血清濃度相關。</p>
+<h3 id="_1">血清濃度與症狀對應（劑量–毒性階梯）</h3>
+<table>
+<thead>
+<tr>
+<th>血清 Mg²⁺</th>
+<th>臨床效應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5–7 mg/dL</strong></td>
+<td>子癇前症的<strong>治療濃度</strong></td>
+</tr>
+<tr>
+<td><strong>5–10 mg/dL</strong></td>
+<td>傳導受損（widened QRS、PR 延長）、噁心</td>
+</tr>
+<tr>
+<td><strong>20–34 mg/dL</strong></td>
+<td>鎮靜、低血壓下深部肌腱反射↓、肌無力</td>
+</tr>
+<tr>
+<td><strong>24–48 mg/dL</strong></td>
+<td>全身血管擴張併低血壓、心搏過緩</td>
+</tr>
+<tr>
+<td><strong>48–72 mg/dL</strong></td>
+<td>反射消失（areflexia）、昏迷、呼吸麻痺</td>
+</tr>
+</tbody>
+</table>
+<p>（詳見 image <code>raw/images/螢幕擷取畫面 2026-06-22 095144.png</code>）</p>
+<p><img src="../raw/images/螢幕擷取畫面 2026-06-22 095144.png" alt="螢幕擷取畫面 2026-06-22 095144.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> 注意事項</div><div class="callout-body"><p><strong>深部肌腱反射消失（loss of DTR）是即將呼吸抑制的早期警訊</strong>，臨床上以此監測 MgSO₄ 治療安全性。一旦反射消失應暫停輸注並重新評估。</p></div></div>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p>嚴重高鎂血症的處置：停止 Mg²⁺ 來源 → 靜脈給予 <strong>鈣劑（calcium gluconate / chloride）</strong> 拮抗心臟與神經肌肉效應 → 利尿、必要時血液透析（腎衰竭者）。Mg²⁺ 會增強 NMBD 作用，麻醉時須減量並加強監測。</p></div></div>
+<h2 id="_2">相關頁面</h2>
+<ul>
+<li><a href="./preeclampsia-anesthesia.html" class="wiki-link">preeclampsia-anesthesia</a> — MgSO₄ 用於子癇前症與胎兒神經保護</li>
+<li><a href="./neuromuscular-physiology-and-pharmacology.html" class="wiki-link">neuromuscular-physiology-and-pharmacology</a> — Mg²⁺ 增強非去極化 NMBD 作用</li>
+<li><a href="./acute-kidney-injury-criteria.html" class="wiki-link">acute-kidney-injury-criteria</a> — 腎功能不全與電解質清除</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

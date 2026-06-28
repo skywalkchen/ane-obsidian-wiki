@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Anesthesia — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="pediatric-blood-volume-mabl">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">note</span><span class="meta-miller">Miller Ch. 72</span><span class="meta-tag">pediatric</span><span class="meta-tag">note</span><span class="meta-tag">miller-ch72</span></div>
+    <h1 id="pediatric-anesthesia">Pediatric Anesthesia</h1>
+<h2 id="estimated-blood-volume-ebv">估計血容量（Estimated Blood Volume, EBV）依年齡</h2>
+<table>
+<thead>
+<tr>
+<th>年齡</th>
+<th>血容量（mL/kg）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>早產兒（preterm）</strong></td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>足月兒（term）</strong></td>
+<td>90</td>
+</tr>
+<tr>
+<td><strong>3–12 個月</strong></td>
+<td>80</td>
+</tr>
+<tr>
+<td><strong>&gt; 1 歲</strong></td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>年齡越小、血容量（mL/kg）越大：<strong>早產 100 &gt; 足月 90 &gt; 嬰兒 80 &gt; 幼兒/成人 70</strong>。但因體重小，<strong>絕對血量極少</strong>，少量失血即占很大比例——小兒失血必須精算。</p></div></div>
+<h2 id="mabl-maximum-allowable-blood-loss">最大容許失血量（MABL, Maximum Allowable Blood Loss）</h2>
+<p>$$
+\text{MABL} = \frac{\text{EBV} \times (\text{Hct}<em target="target">{preop} - \text{Hct}</em>
+$$})}{\text{Hct}_{preop}</p>
+<p>其中 EBV = 體重（kg）× 血容量（mL/kg）。</p>
+<p><strong>範例</strong>：3 kg 足月新生兒，preop Hct 45%，target Hct 30%
+- EBV = 3 × 90 = 270 mL
+- MABL = 270 × (45 − 30) / 45 = <strong>90 mL</strong></p>
+<p>（詳見 clipping <code>raw/clippings/Blood volume of neonate.md</code>）</p>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li><a href="./pediatric-intubation-equipment.html" class="wiki-link">pediatric-intubation-equipment</a> — 小兒 ETT 尺寸、Apgar、CPB 比較</li>
+<li><a href="./pediatric-airway-lma.html" class="wiki-link">pediatric-airway-lma</a> — 小兒氣道</li>
+<li><a href="./pediatric-tonsillectomy-adenoidectomy.html" class="wiki-link">pediatric-tonsillectomy-adenoidectomy</a> — 小兒 T&amp;A</li>
+<li><a href="./blood-conservation.html" class="wiki-link">blood-conservation</a>、<a href="./transfusion-complications.html" class="wiki-link">transfusion-complications</a> — 輸血策略</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>
