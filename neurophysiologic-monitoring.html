@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurophysiologic Monitoring — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="neurophysiologic-monitoring">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 35</span><span class="meta-tag">neuro</span><span class="meta-tag">physiology</span><span class="meta-tag">miller-ch35</span></div>
+    <h1 id="neurophysiologic-monitoring">Neurophysiologic Monitoring</h1>
+<div class="callout callout-info" style="background:#e8f5e9;border-left:4px solid #1b5e20"><div class="callout-title" style="color:#1b5e20"><span class="callout-icon">ℹ️</span> 背景</div><div class="callout-body"><p>術中誘發電位（evoked potentials, EP）用以監測特定神經傳導路徑的完整性。不同 EP 對麻醉藥的敏感度差異極大，麻醉策略必須依所監測的 EP 種類調整。EEG-based 麻醉深度監測見 [[monitoring-brain-response]]；脊椎側彎手術的實務應用見 [[scoliosis-neuromonitoring]]。</p></div></div>
+<h2 id="_1">誘發電位對麻醉藥的敏感度階層</h2>
+<p>由<strong>最抗麻醉抑制</strong>到<strong>最易被抑制</strong>排序：<strong>BAEP &gt; SSEP &gt; MEP &gt; VEP</strong>。越往下（VEP），可容許的麻醉藥選擇越少。</p>
+<table>
+<thead>
+<tr>
+<th>誘發電位</th>
+<th>監測路徑</th>
+<th>抗麻醉抑制</th>
+<th>可保留訊號的靜脈藥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BAEP</strong>（腦幹聽覺誘發電位）</td>
+<td>聽神經 → 腦幹</td>
+<td>最強（幾乎不受影響）</td>
+<td>幾乎所有麻醉藥（all）</td>
+</tr>
+<tr>
+<td><strong>SSEP</strong>（體感誘發電位）</td>
+<td>後索 → 感覺皮質</td>
+<td>中等</td>
+<td>Etomidate、Ketamine、Dexmedetomidine（E/K/D）</td>
+</tr>
+<tr>
+<td><strong>MEP</strong>（運動誘發電位）</td>
+<td>皮質脊髓運動路徑</td>
+<td>較弱</td>
+<td>Etomidate、Ketamine（E/K）</td>
+</tr>
+<tr>
+<td><strong>VEP</strong>（視覺誘發電位）</td>
+<td>視網膜 → 枕葉皮質</td>
+<td>最弱（最不穩定）</td>
+<td>Dexmedetomidine（D）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../raw/images/Scan_20260702_163908.jpg" alt="Scan_20260702_163908.jpg" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p><strong>鴉片類（opioids）不影響任何誘發電位</strong>，因此是 EP 監測期間麻醉的理想主幹——可提供鎮痛與抑制反應，而不干擾 BAEP/SSEP/MEP/VEP 訊號。監測 MEP 時常採 <strong>opioid + 丙泊酚/ketamine 的全靜脈麻醉（TIVA）</strong>，並<strong>避免使用揮發性吸入麻醉藥與神經肌肉阻斷劑</strong>（兩者皆顯著抑制 MEP）。</p></div></div>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>揮發性吸入麻醉藥對誘發電位的抑制呈劑量依賴，且對 <strong>MEP、VEP</strong> 最為顯著；SSEP 可耐受約 ≤0.5–1.0 MAC。VEP 極不穩定，臨床少單獨用於決策。<strong>Etomidate 與 ketamine 甚至可增強 SSEP 振幅</strong>，在振幅偏低的病人可作為輔助。</p></div></div>
+<h2 id="_2">相關頁面</h2>
+<ul>
+<li><a href="./monitoring-brain-response.html" class="wiki-link">monitoring-brain-response</a> — EEG 麻醉深度監測</li>
+<li><a href="./scoliosis-neuromonitoring.html" class="wiki-link">scoliosis-neuromonitoring</a> — 脊椎側彎矯正的 SSEP/tcMEP 實務</li>
+<li><a href="./cerebral-physiology.html" class="wiki-link">cerebral-physiology</a></li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>

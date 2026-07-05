@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuromuscular Monitoring — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page="neuromuscular-monitoring">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 39</span><span class="meta-tag">physiology</span><span class="meta-tag">pharmacology</span><span class="meta-tag">miller-ch39</span></div>
+    <h1 id="neuromuscular-monitoring">Neuromuscular Monitoring</h1>
+<div class="callout callout-info" style="background:#e8f5e9;border-left:4px solid #1b5e20"><div class="callout-title" style="color:#1b5e20"><span class="callout-icon">ℹ️</span> 背景</div><div class="callout-body"><p>本頁聚焦 <strong>TOF ratio 與臨床恢復徵象的對應</strong>。殘餘阻斷的臨床測試診斷效能（敏感度/特異度）見 [[neuromuscular-blockade-reversal]]；NMJ 安全邊際與 fade 機制見 [[neuromuscular-physiology-and-pharmacology]]。</p></div></div>
+<h2 id="tof-ratio">TOF ratio 與臨床恢復徵象對應</h2>
+<p>Train-of-four（TOF）ratio 為第四個顫搐（T4）與第一個顫搐（T1）振幅比值，用以量化非去極化肌鬆的恢復程度。隨 TOF ratio 上升，肌力依「膈肌/大肌群 → 頭頸抬舉 → 咽喉保護肌」的順序逐步恢復：</p>
+<table>
+<thead>
+<tr>
+<th>TOF ratio</th>
+<th>臨床恢復徵象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.4</strong></td>
+<td>潮氣量（TV）足夠，但肺活量（VC）下降；<strong>無法抬起手腳</strong></td>
+</tr>
+<tr>
+<td><strong>0.6</strong></td>
+<td>可睜眼、伸舌</td>
+</tr>
+<tr>
+<td><strong>0.7</strong></td>
+<td>可有效咳嗽；<strong>抬頭 &gt; 5 秒</strong></td>
+</tr>
+<tr>
+<td><strong>0.8</strong></td>
+<td>肺活量（VC）恢復正常</td>
+</tr>
+<tr>
+<td><strong>0.9</strong></td>
+<td>咽喉保護肌恢復（安全拔管門檻）</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><p><strong>TOF ratio ≥ 0.9</strong> 為現行拔管安全標準。低於 0.9 時，即使 TV 與抬頭測試看似正常，<strong>咽喉肌與上呼吸道保護反射仍未完全恢復</strong>，有吸入性肺炎與上呼吸道阻塞風險。抬頭 5 秒僅對應 TOF ≈ 0.7，不足以確認安全拔管。</p></div></div>
+<div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 臨床觀察</div><div class="callout-body"><p>床邊徵象由粗到細恢復：先能維持通氣（TV），再能執行抬頭/握力等大肌群動作，最後才恢復咽喉肌協調。單靠臨床徵象會<strong>高估</strong>恢復程度，應以定量 TOF 監測（加速度描記 acceleromyography）確認 TOF ≥ 0.9 再拔管。</p></div></div>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li><a href="./neuromuscular-blockade-reversal.html" class="wiki-link">neuromuscular-blockade-reversal</a> — 殘餘阻斷臨床測試的敏感度/特異度、拮抗藥</li>
+<li><a href="./neuromuscular-physiology-and-pharmacology.html" class="wiki-link">neuromuscular-physiology-and-pharmacology</a> — NMJ 安全邊際、突觸前 fade</li>
+<li><a href="./nmbd-pharmacokinetics.html" class="wiki-link">nmbd-pharmacokinetics</a> — NMBD onset / duration / 效價</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js"></script>
+</body>
+</html>
