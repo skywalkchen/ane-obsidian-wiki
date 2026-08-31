@@ -51,7 +51,6 @@
 </tr>
 </tbody>
 </table>
-<p><img src="../raw/images/螢幕擷取畫面 2026-07-27 072400.png" alt="螢幕擷取畫面 2026-07-27 072400.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
 <div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 臨床觀察</div><div class="callout-body"><p>同一作者後續發現 <strong>年齡 &lt; 50 歲（young age）</strong> 是<strong>出院後噁心嘔吐（PDNV, postdischarge nausea and vomiting）</strong> 的另一項獨立危險因子——與住院期 PONV 的四因子略有不同，門診/日間手術評估 PDNV 時須納入年齡。</p></div></div>
 <h3 id="_1">風險預測</h3>
 <table>
@@ -126,7 +125,23 @@
 </table>
 <div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 臨床觀察</div><div class="callout-body"><p>全靜脈麻醉（TIVA with Propofol）可顯著降低 PONV 發生率，為高風險病患的麻醉選項之一。區域麻醉亦可降低 PONV 風險（減少全身麻醉藥與 opioid 用量）。</p></div></div>
 <h2 id="ponv_1">PONV 預防與治療演算法</h2>
-<p><img src="../raw/images/螢幕擷取畫面 2026-08-04 171944.png" alt="螢幕擷取畫面 2026-08-04 171944.png" style="max-width:100%;border-radius:6px;margin:12px 0"></p>
+<pre><div class="mermaid">flowchart TD
+    A[&quot;風險因子評估&lt;br/&gt;成人：PONV／暈動症病史、女性、非吸煙者&lt;br/&gt;術後 opioid、致吐手術（術式與時長）&lt;br/&gt;兒童：手術 &gt; 30 分、年齡 &gt; 3 歲&lt;br/&gt;斜視手術、POV 病史／親屬有 PONV&quot;] --&gt; B{&quot;Consider（綜合考量）&quot;}
+    B --&gt; C[&quot;病人偏好&lt;br/&gt;害怕 PONV、PONV 常誘發頭痛／偏頭痛&quot;]
+    B --&gt; D[&quot;成本效益&lt;br/&gt;Cost-effectiveness&quot;]
+    B --&gt; E[&quot;降低基礎風險&lt;br/&gt;避免／減少 N₂O、揮發性麻醉藥&lt;br/&gt;高劑量 neostigmine、術後 opioid&quot;]
+    B --&gt; F[&quot;風險等級（依危險因子數）&lt;br/&gt;0 RF：10%　1 RF：10–20%&lt;br/&gt;2 RF：30–40%　3 RF：50–60%&lt;br/&gt;4 RF：70–80%&quot;]
+    C --&gt; G[&quot;病人整體風險（Patient risk）&quot;]
+    D --&gt; G
+    E --&gt; G
+    F --&gt; G
+    G --&gt; H[&quot;低風險&lt;br/&gt;Wait and see&quot;]
+    G --&gt; I[&quot;中風險&lt;br/&gt;成人選 1–2 種介入&lt;br/&gt;兒童選 ≥ 2 種介入&quot;]
+    G --&gt; J[&quot;高風險&lt;br/&gt;≥ 2 種介入／多模式 multimodal&quot;]
+    I --&gt; K[&quot;預防與治療藥物組合（Portfolio）&lt;br/&gt;Propofol 麻醉、區域麻醉、Dexamethasone、5-HT₃ 拮抗劑&lt;br/&gt;Droperidol／Haloperidol、Promethazine／Prochlorperazine／Perphenazine&lt;br/&gt;Scopolamine、Ephedrine、Dimenhydrinate&lt;br/&gt;非藥物（針灸）、PACU rescue Propofol&quot;]
+    J --&gt; K
+    K --&gt; L[&quot;治療（Treatment / Rescue）&lt;br/&gt;預防失敗或未接受預防 → 改用不同類別止吐藥&lt;br/&gt;僅在 PACU 後 &gt; 6 小時才重新給藥&lt;br/&gt;Dexamethasone 與 Scopolamine 不重複給予&quot;]
+</div></pre>
 <div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 演算法邏輯</div><div class="callout-body"><ol>
 <li><strong>評估風險因子</strong>：成人（PONV/暈動症病史、女性、非吸煙者、術後 opioid、致吐手術）與兒童（手術 &gt; 30 分、年齡 &gt; 3 歲、斜視手術、POV 病史／親屬 PONV）。</li>
 <li><strong>降低基礎風險</strong>：避免/減少 N₂O、吸入麻醉、高劑量 neostigmine、術後 opioid。</li>

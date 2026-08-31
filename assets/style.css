@@ -188,3 +188,49 @@ blockquote { border-left: 4px solid var(--border); padding: 4px 16px; color: var
   #sidebar { display: none; }
   #content { padding: 20px 18px 60px; }
 }
+
+
+/* ===== 首頁全文搜尋 ===== */
+#home-search { margin: 18px 0 30px; }
+.hs-bar {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.hs-bar:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(26,86,219,.12); }
+.hs-icon { font-size: 1rem; opacity: .55; }
+#hs-input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-size: 1rem; font-family: inherit; color: var(--text);
+}
+#hs-input::-webkit-search-cancel-button { display: none; }
+#hs-clear {
+  border: none; background: transparent; cursor: pointer;
+  color: var(--muted); font-size: .9rem; padding: 2px 4px; display: none;
+}
+#home-search.active #hs-clear { display: block; }
+#hs-meta { font-size: .8rem; color: var(--muted); margin: 9px 2px 0; }
+#hs-results { margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.hs-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 14px;
+}
+.hs-title { font-size: 1rem; font-weight: 700; color: var(--link); text-decoration: none; }
+.hs-title:hover { text-decoration: underline; }
+.hs-badges { display: block; margin: 5px 0 4px; }
+.hs-ch, .hs-tag {
+  display: inline-block; font-size: .68rem; padding: 2px 7px;
+  border-radius: 9px; margin: 2px 5px 2px 0; white-space: nowrap;
+}
+.hs-ch  { background: #fef3c7; color: #92400e; }
+.hs-tag { background: #eef2ff; color: #3730a3; }
+.hs-hit { border-left: 2px solid var(--border); padding-left: 10px; margin-top: 9px; }
+.hs-sec {
+  font-size: .8rem; font-weight: 600; color: var(--muted);
+  text-decoration: none; display: block; margin-bottom: 3px;
+}
+.hs-sec:hover { color: var(--accent); }
+.hs-snip { font-size: .85rem; line-height: 1.75; color: var(--text); }
+#hs-results mark { background: #fde68a; color: inherit; border-radius: 2px; padding: 0 1px; }
+.hs-more { font-size: .8rem; color: var(--muted); text-align: center; padding: 6px; }
