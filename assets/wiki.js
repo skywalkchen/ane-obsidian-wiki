@@ -10,9 +10,9 @@
 
   // ── Load all data files ──────────────────────────────────────────────────
   Promise.all([
-    fetch('./assets/nav-data.json').then(r => r.json()),
-    fetch('./assets/graph-data.json').then(r => r.json()),
-    fetch('./assets/backlinks.json').then(r => r.json()),
+    fetch('./assets/nav-data.json?v=' + (window.WIKI_V || '')).then(r => r.json()),
+    fetch('./assets/graph-data.json?v=' + (window.WIKI_V || '')).then(r => r.json()),
+    fetch('./assets/backlinks.json?v=' + (window.WIKI_V || '')).then(r => r.json()),
   ]).then(([navData, graphData, backlinksData]) => {
     buildNav(navData);
     buildTagPanel(navData);
@@ -32,7 +32,7 @@
     pages.forEach(p => (grouped[p.type] || (grouped[p.type] = [])).push(p));
 
     Object.entries(sections).forEach(([type, label]) => {
-      if (!grouped[type]?.length) return;
+      if (!grouped[type] || !grouped[type].length) return;
       const hdr = document.createElement('div');
       hdr.className = 'nav-section-header'; hdr.textContent = label;
       nav.appendChild(hdr);
@@ -63,7 +63,10 @@
         if (activeTag === tag) {
           activeTag = null; el.classList.remove('active');
         } else {
-          if (activeTag) panel.querySelector(`.tag-chip[data-tag="${activeTag}"]`)?.classList.remove('active');
+          if (activeTag) {
+            var prev = panel.querySelector('.tag-chip[data-tag="' + activeTag + '"]');
+            if (prev) prev.classList.remove('active');
+          }
           activeTag = tag; el.classList.add('active');
         }
         applyFilters();
@@ -80,7 +83,8 @@
   }
 
   function applyFilters() {
-    const q = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+    var searchEl = document.getElementById('search-input');
+    const q = ((searchEl && searchEl.value) || '').toLowerCase().trim();
     document.querySelectorAll('.nav-link').forEach(el => {
       const tagOk = !activeTag || el.dataset.tags.split(' ').includes(activeTag);
       const qOk   = !q || el.dataset.q.includes(q);
@@ -210,157 +214,4 @@
     document.head.appendChild(script);
   }
 
-})();
-
-
-/* ── 首頁全文搜尋 ───────────────────────────────────────────────────────── */
-(function () {
-  'use strict';
-  if ((document.body.dataset.page || '') !== 'index') return;
-
-  var box   = document.getElementById('home-search');
-  if (!box) return;
-  var input = document.getElementById('hs-input');
-  var clear = document.getElementById('hs-clear');
-  var meta  = document.getElementById('hs-meta');
-  var out   = document.getElementById('hs-results');
-
-  var DATA = null, HAY = null, MAX = 60, timer = null;
-
-  fetch('./assets/search-index.json')
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      DATA = d;
-      HAY = d.map(function (p) {
-        var parts = [p.t, (p.tg || []).join(' '), p.m ? 'miller ch ' + p.m : ''];
-        p.sec.forEach(function (s) { parts.push(s.h, s.x); });
-        return parts.join(' ').toLowerCase();
-      });
-      input.disabled = false;
-      input.placeholder = '輸入關鍵字，搜尋全部 ' + d.length + ' 個章節的內文…';
-      if (input.value.trim()) run();
-    })
-    .catch(function (e) {
-      meta.textContent = '搜尋索引載入失敗（請確認 assets/search-index.json 已部署）';
-      console.warn('[search]', e);
-    });
-
-  input.addEventListener('input', function () {
-    clearTimeout(timer);
-    timer = setTimeout(run, 120);
-  });
-  input.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { input.value = ''; run(); }
-  });
-  clear.addEventListener('click', function () { input.value = ''; input.focus(); run(); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === '/' && document.activeElement !== input) { e.preventDefault(); input.focus(); }
-  });
-
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-    });
-  }
-  function rxEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-
-  function hl(text, terms) {
-    var rx = new RegExp('(' + terms.map(rxEsc).join('|') + ')', 'gi');
-    var res = '', last = 0, m;
-    while ((m = rx.exec(text)) !== null) {
-      if (m[0].length === 0) { rx.lastIndex++; continue; }
-      res += esc(text.slice(last, m.index)) + '<mark>' + esc(m[0]) + '</mark>';
-      last = m.index + m[0].length;
-    }
-    return res + esc(text.slice(last));
-  }
-
-  function snippet(text, terms) {
-    var low = text.toLowerCase(), pos = -1;
-    for (var i = 0; i < terms.length; i++) {
-      var p = low.indexOf(terms[i]);
-      if (p >= 0 && (pos < 0 || p < pos)) pos = p;
-    }
-    if (pos < 0) pos = 0;
-    var start = Math.max(0, pos - 45), end = Math.min(text.length, pos + 135);
-    return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
-  }
-
-  function countOf(hay, term) { return hay.split(term).length - 1; }
-
-  function run() {
-    var q = input.value.trim().toLowerCase();
-    if (!q) {
-      box.classList.remove('active'); meta.textContent = ''; out.innerHTML = ''; return;
-    }
-    box.classList.add('active');
-    if (!DATA) { meta.textContent = '索引載入中…'; return; }
-
-    var terms = q.split(/\s+/).filter(Boolean);
-    var hits = [];
-
-    DATA.forEach(function (p, i) {
-      var hay = HAY[i];
-      for (var k = 0; k < terms.length; k++) { if (hay.indexOf(terms[k]) < 0) return; }
-
-      var titleLow = p.t.toLowerCase(), tagLow = (p.tg || []).join(' ').toLowerCase();
-      var score = 0;
-      terms.forEach(function (t) {
-        if (titleLow.indexOf(t) >= 0) score += 200;
-        if (tagLow.indexOf(t) >= 0) score += 60;
-        score += countOf(hay, t);
-      });
-
-      var secs = [];
-      p.sec.forEach(function (s) {
-        var sl = (s.h + ' ' + s.x).toLowerCase(), n = 0, c = 0;
-        terms.forEach(function (t) {
-          if (sl.indexOf(t) >= 0) { n++; c += countOf(sl, t); }
-          if (s.h.toLowerCase().indexOf(t) >= 0) c += 5;
-        });
-        if (/相關頁面|參考|延伸閱讀|完整資料|references|see also/i.test(s.h)) c -= 4;
-        if (n) secs.push({ s: s, n: n, c: c });
-      });
-      secs.sort(function (a, b) { return (b.n - a.n) || (b.c - a.c); });
-      var picked = secs.slice(0, 3).map(function (o) { return o.s; });
-      if (!picked.length && p.sec.length) picked = [p.sec[0]];
-
-      hits.push({ p: p, score: score, secs: picked });
-    });
-
-    hits.sort(function (a, b) { return (b.score - a.score) || a.p.t.localeCompare(b.p.t); });
-    render(hits, terms);
-  }
-
-  function render(hits, terms) {
-    out.innerHTML = '';
-    if (!hits.length) {
-      meta.textContent = '找不到含「' + input.value.trim() + '」的章節';
-      return;
-    }
-    meta.textContent = '找到 ' + hits.length + ' 個章節' +
-      (hits.length > MAX ? '（顯示前 ' + MAX + ' 個）' : '');
-
-    var frag = document.createDocumentFragment();
-    hits.slice(0, MAX).forEach(function (h) {
-      var card = document.createElement('div');
-      card.className = 'hs-card';
-      var html = '<a class="hs-title" href="./' + h.p.s + '.html">' + hl(h.p.t, terms) + '</a>';
-      var badges = '';
-      if (h.p.m) badges += '<span class="hs-ch">Miller Ch. ' + esc(h.p.m) + '</span>';
-      (h.p.tg || []).slice(0, 5).forEach(function (t) {
-        badges += '<span class="hs-tag">' + hl(t, terms) + '</span>';
-      });
-      if (badges) html += '<span class="hs-badges">' + badges + '</span>';
-      h.secs.forEach(function (s) {
-        var href = './' + h.p.s + '.html' + (s.a ? '#' + s.a : '');
-        html += '<div class="hs-hit">';
-        if (s.h) html += '<a class="hs-sec" href="' + href + '">§ ' + hl(s.h, terms) + '</a>';
-        html += '<div class="hs-snip">' + hl(snippet(s.x, terms), terms) + '</div></div>';
-      });
-      card.innerHTML = html;
-      frag.appendChild(card);
-    });
-    out.appendChild(frag);
-  }
 })();
