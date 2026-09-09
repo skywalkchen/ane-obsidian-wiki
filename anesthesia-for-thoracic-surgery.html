@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anesthesia for Thoracic Surgery — 麻醉學 Wiki</title>
-  <link rel="stylesheet" href="./assets/style.css?v=7ff3fa12">
+  <link rel="stylesheet" href="./assets/style.css?v=6e677dcc">
 </head>
 <body data-page="anesthesia-for-thoracic-surgery">
 
@@ -69,6 +69,7 @@
 <h2 id="hypoxic-pulmonary-vasoconstriction-hpv">低氧性肺血管收縮（Hypoxic Pulmonary Vasoconstriction, HPV）</h2>
 <p>HPV 是一種代償機制，將血流由<strong>低氧肺區</strong>導向<strong>含氧較佳的肺區</strong>，以改善 V/Q 匹配。主要刺激為<strong>低肺泡氧分壓（PAO₂）</strong>——不論來自換氣不足或吸入低 PO₂ 氣體；作用範圍越小，效果越強。混合靜脈血低氧（PvO₂）為較弱的次要刺激。單肺通氣（OLV）時，HPV 可使非通氣肺的血流減少約 <strong>50%</strong>，是限制分流、維持氧合的關鍵。</p>
 <div class="callout callout-info" style="background:#e8f5e9;border-left:4px solid #1b5e20"><div class="callout-title" style="color:#1b5e20"><span class="callout-icon">ℹ️</span> 雙相時間反應（Biphasic Temporal Response）</div><div class="callout-body"><p>HPV 對肺泡低氧呈雙相反應：<strong>快相</strong>於低氧後立即啟動，20–30 分鐘達平台；<strong>延遲相</strong>於 40 分鐘後開始，2 小時達平台（Fig 49.34）。其<strong>消退亦為雙相</strong>，長時間 OLV 後肺血管阻力可能數小時才回到基線——這可能導致雙側胸腔手術時，<strong>第二側肺塌陷期間去飽和加重</strong>。HPV 亦具<strong>預處理（preconditioning）</strong>效果：對第二次低氧刺激的反應會強於第一次。</p></div></div>
+<div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 人體量化資料</div><div class="callout-body"><p>健康人於持續低氧下，以右心導管與都卜勒超音波（三尖瓣收縮期最大壓差 ΔPmax）量測<strong>收縮期肺動脈壓（SPAP）</strong>：低氧後 <strong>30 分鐘內</strong>即升高約 <strong>7–8 mmHg</strong>（快相），隨後緩升，<strong>約 6 小時</strong>達平台（ΔPmax ≈ 16 mmHg）；恢復常氧後<strong>迅速回落</strong>（約 8.5 h 已降至 ≈ 3 mmHg）。此曲線印證 HPV 的雙相上升與快速可逆特性。</p></div></div>
 <h3 id="no-cgmp-pde">分子機制：NO / cGMP / PDE 路徑</h3>
 <p>肺血管阻力由內皮與血管平滑肌交互作用主動調控，核心分子為 <strong>nitric oxide（NO）</strong>。內皮細胞以 nitric oxide synthase 將 L-arginine 轉為 L-citrulline 並產生 NO；NO 擴散至平滑肌，刺激 <strong>soluble guanylate cyclase（sGC）</strong> 生成 <strong>cGMP</strong>，活化 <strong>PKG</strong> 導致血管舒張。cGMP 由 <strong>phosphodiesterase（PDE）</strong> 水解為 GMP 而失活。此路徑為肺高壓治療藥物之標的：吸入 NO 因迅速與血紅素結合而<strong>選擇性舒張肺血管</strong>、不引起體循環擴張；<strong>PDE5 抑制劑（sildenafil、vardenafil）</strong> 抑制 cGMP 分解而增強肺血管舒張（詳見 <a href="./pulmonary-hypertension-anesthesia.html" class="wiki-link">pulmonary-hypertension-anesthesia</a>）。</p>
 <h3 id="hpv">麻醉藥與 HPV</h3>
@@ -94,8 +95,88 @@
 8. 非通氣肺<strong>部分通氣技術</strong>：間歇正壓通氣、纖支鏡肺葉充氣、選擇性肺葉塌陷（bronchial blocker）、小潮氣量通氣
 9. 藥理操作、<strong>機械性限制非通氣肺血流</strong>（若可行）
 10. <strong>Venovenous ECMO</strong></p></div></div>
+<h2 id="oxygenation">氧合監測與去飽和預測（Oxygenation）</h2>
+<p>儘管 FiO₂ 1.0，仍有 <strong>1%–10%</strong> 的手術族群在 OLV 期間發生顯著去飽和（SpO₂ &lt; 90%）。</p>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> PaO₂ 比 SpO₂ 更能反映安全邊際</div><div class="callout-body"><p>脈搏血氧（SpO₂）<strong>無法取代</strong>大多數開胸病患的間歇性動脈血氣（直接測 PaO₂）。PaO₂ 提供「距離去飽和還有多少緩衝」的更有用估計：
+- 雙肺通氣（TLV）時 <strong>PaO₂ &gt; 400 mmHg</strong>（FiO₂ 1.0，或等效 P/F ratio）者，OLV 期間<strong>不易去飽和</strong>。
+- TLV 時 <strong>PaO₂ 僅 200 mmHg</strong> 者，OLV 期間<strong>容易去飽和</strong>。
+- <strong>但兩者的 SpO₂ 都可能是 99%–100%</strong>——SpO₂ 在氧合解離曲線平台段對高 PaO₂ 差異不敏感，故不能提前預警。</p></div></div>
+<h2 id="table-496">雙腔管與單腔管管徑對照（Table 49.6）</h2>
+<p>選擇 double-lumen tube（DLT）時需對照其外徑（ED）與可通過之纖維支氣管鏡（FOB）管徑；下表對照單腔管（SLT）與 DLT 之尺寸：</p>
+<table>
+<thead>
+<tr>
+<th>SLT 內徑 ID (mm)</th>
+<th>SLT 外徑 ED (mm)</th>
+<th>DLT French (Fr)</th>
+<th>DLT 外徑 ED (mm)</th>
+<th>支氣管腔內徑 (mm)</th>
+<th>可用 FOB 管徑 (mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.5</td>
+<td>8.9</td>
+<td>26</td>
+<td>8.7</td>
+<td>3.2</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>7.0</td>
+<td>9.5</td>
+<td>28</td>
+<td>9.3</td>
+<td>3.4</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>8.0</td>
+<td>10.8</td>
+<td>32</td>
+<td>10.7</td>
+<td>3.5</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>8.5</td>
+<td>11.4</td>
+<td>35</td>
+<td>11.7</td>
+<td>4.3</td>
+<td>≥3.5</td>
+</tr>
+<tr>
+<td>9.0</td>
+<td>12.1</td>
+<td>37</td>
+<td>12.3</td>
+<td>4.5</td>
+<td>≥3.5</td>
+</tr>
+<tr>
+<td>9.5</td>
+<td>12.8</td>
+<td>39</td>
+<td>13.0</td>
+<td>4.9</td>
+<td>≥3.5</td>
+</tr>
+<tr>
+<td>10.0</td>
+<td>13.5</td>
+<td>41</td>
+<td>13.7</td>
+<td>5.4</td>
+<td>≥3.5</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠</div><div class="callout-body"><p>成人常用 <strong>35–41 Fr</strong> DLT；<strong>≥ 35 Fr</strong> 之支氣管腔（ID ≥ 4.3 mm）方能通過標準 <strong>3.5 mm</strong> 纖維支氣管鏡，較小的 26–32 Fr 僅能通過 <strong>2.4 mm</strong> 細徑鏡。</p></div></div>
 <h2 id="_1">相關頁面</h2>
 <ul>
+<li><a href="./respiratory-physiology.html" class="wiki-link">respiratory-physiology</a> — PVR 與肺容積關係、通氣血流生理</li>
 <li><a href="./asthma-anesthesia-ventilation.html" class="wiki-link">asthma-anesthesia-ventilation</a></li>
 <li><a href="./cardiovascular-monitoring.html" class="wiki-link">cardiovascular-monitoring</a></li>
 <li><a href="./perioperative-pulmonary-risk.html" class="wiki-link">perioperative-pulmonary-risk</a></li>
@@ -118,9 +199,9 @@
   </div>
 </div>
 
-<script>window.WIKI_V="7ff3fa12";</script>
+<script>window.WIKI_V="6e677dcc";</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="./assets/wiki.js?v=7ff3fa12"></script>
-<script src="./assets/search.js?v=7ff3fa12"></script>
+<script src="./assets/wiki.js?v=6e677dcc"></script>
+<script src="./assets/search.js?v=6e677dcc"></script>
 </body>
 </html>
