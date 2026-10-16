@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sleep Medicine — 麻醉學 Wiki</title>
-  <link rel="stylesheet" href="./assets/style.css?v=eadd0185">
+  <link rel="stylesheet" href="./assets/style.css?v=3470f809">
 </head>
 <body data-page="sleep-medicine">
 
@@ -75,6 +75,50 @@
 <div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> REM 抑制與術後 REM 反彈</div><div class="callout-body"><p>多數傳統 GABA-A 促動劑（propofol、benzodiazepines）、揮發性麻醉藥與鴉片類皆顯著抑制 REM 與 N3。手術與麻醉後<strong>第 1 晚 REM 極度缺乏</strong>，隨後於<strong>術後第 2–4 晚引發強烈 REM 反彈</strong>：患者易出現劇烈夢境、夜間頻繁甦醒與交感神經高度興奮（增加心血管風險）。</p></div></div>
 <div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> Dexmedetomidine 的獨特生理優勢</div><div class="callout-body"><p>Dexmedetomidine 是目前唯一透過<strong>非 GABA 路徑</strong>（興奮 α₂、抑制藍斑核）產生鎮靜的藥物。它模擬內源性睡眠路徑、誘發最接近自然 NREM N2 的結構、具「可喚醒性」，並明確降低 ICU 譫妄。</p></div></div>
 <div class="callout callout-note" style="background:#e3f2fd;border-left:4px solid #1565c0"><div class="callout-title" style="color:#1565c0"><span class="callout-icon">💬</span> 褪黑激素與時鐘基因</div><div class="callout-body"><p><strong>Opioids</strong> 破壞睡眠結構，但不抹除夜間褪黑激素高峰；<strong>揮發性麻醉藥</strong>則直接抑制核心時鐘基因 <em>per-2</em>，對晝夜節律產生分子級干擾。</p></div></div>
+<h2 id="flip-flop-switch">睡眠—清醒的神經調控：Flip-Flop Switch</h2>
+<p>睡眠與清醒的切換由下視丘—腦幹之間的<strong>雙穩態「翻轉開關（flip-flop switch）」</strong>控制：兩組互相抑制的神經核彼此拮抗，使系統快速、完整地在清醒與睡眠間轉換，避免停留於中間的不穩定狀態。</p>
+<ul>
+<li><strong>清醒促進端</strong>：腦幹上行喚醒系統（ascending arousal system, AAS）的神經核，直接與間接興奮（＋）<strong>視丘（thalamus）</strong>、<strong>基底前腦（basal forebrain, BF）</strong>與<strong>大腦皮質</strong>，同時抑制（−）視前區睡眠核（switch flips to wakefulness）。</li>
+<li><strong>睡眠促進端</strong>：下視丘<strong>腹外側視前核（VLPO）</strong>與<strong>中間視前核（MnPO）</strong>於睡眠時活化，抑制（−）腦幹 AAS 與 orexinergic 神經元（switch flops to sleep）。</li>
+<li><strong>穩定器 orexin（OX，下視丘外側）</strong>：清醒時額外興奮 BF 與 AAS，強化清醒端、避免不當入睡；睡眠時 OX 本身受 VLPO/MnPO 抑制。Orexin 訊號喪失即為 narcolepsy 的病理基礎。</li>
+</ul>
+<pre><div class="mermaid">flowchart LR
+    AAS[腦幹 AAS 喚醒核] --&gt;|+ 興奮| CTX[皮質 / 視丘 / 基底前腦]
+    AAS --&gt;|− 抑制| VLPO[VLPO / MnPO 睡眠核]
+    VLPO --&gt;|− 抑制| AAS
+    VLPO --&gt;|− 抑制| OX[Orexin 神經元]
+    OX --&gt;|+ 穩定清醒| AAS
+    OX --&gt;|+| CTX
+</div></pre>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床關聯</div><div class="callout-body"><p>Dexmedetomidine 經<strong>抑制藍斑核（LC，屬 AAS）</strong>解除其對 VLPO 的抑制，等於把 flip-flop switch 推向睡眠端，因此鎮靜最接近自然 NREM（見上方藥物表與 [[autonomic-nervous-system|Autonomic Nervous System]]）。</p></div></div>
+<h2 id="_3">麻醉、鎮靜與睡眠：通往意識喪失的多重路徑</h2>
+<p>意識喪失可依<strong>是否可被喚醒（arousability）</strong>分層：自然睡眠與藥物鎮靜共享「可喚醒」的表型，而全身麻醉則為「不可喚醒」。</p>
+<table>
+<thead>
+<tr>
+<th>狀態</th>
+<th>可喚醒性</th>
+<th>主要神經機轉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>自然睡眠 / 鎮靜（sedation）</strong></td>
+<td><strong>可喚醒（arousable）</strong></td>
+<td>活化睡眠促進核（VLPO/MnPO，GABA 路徑）或抑制喚醒路徑（orexin 受體、LC、α₂）</td>
+</tr>
+<tr>
+<td><strong>全身麻醉（general anesthesia）</strong></td>
+<td><strong>不可喚醒（non-arousable）</strong></td>
+<td>於麻醉劑量<strong>同時</strong>調控上述核的<strong>下游神經迴路（尤其新皮質 neocortex）</strong>，破壞大腦跨時空尺度的訊息整合能力</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 關鍵區別：麻醉 ≠ 睡眠</div><div class="callout-body"><ul>
+<li>低劑量麻醉藥經活化睡眠促進 VLPO/MnPO 即可產生<strong>可喚醒的鎮靜</strong>。</li>
+<li><strong>全身麻醉（不可喚醒）無法僅靠活化「抑制喚醒」的迴路達成</strong>；必須在腦幹／下視丘核的<strong>下游（如新皮質）</strong>同時破壞訊息處理。</li>
+<li>起點可重疊（睡眠促進核），但麻醉額外癱瘓皮質整合（詳見 [[inhaled-anesthetics-mechanisms|Inhaled Anesthetics: Mechanisms of Action]]）。</li>
+</ul></div></div>
 <h2 id="osa">阻塞性睡眠呼吸中止（OSA）的圍術期意義</h2>
 <div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> OSA 與術後呼吸道</div><div class="callout-body"><ul>
 <li>OSA 患者術後<strong>阻塞性呼吸事件發生率高，於術後第 3 天（POD 3）達高峰</strong>，約一週後才回到術前水準（與 REM 反彈時程一致）。</li>
@@ -82,10 +126,18 @@
 <li>術後可能出現呼吸道水腫；應<strong>盡量減少 opioids 與鎮靜劑等呼吸抑制藥物</strong>。</li>
 <li>Dexamethasone 常於術後給予以減輕呼吸道水腫。</li>
 </ul></div></div>
-<h2 id="_3">相關頁面</h2>
+<div class="callout callout-caution" style="background:#fbe9e7;border-left:4px solid #bf360c"><div class="callout-title" style="color:#bf360c"><span class="callout-icon">🚫</span> OSA 圍術期風險與氣道難度</div><div class="callout-body"><ul>
+<li><strong>氣道處理更困難</strong>：面罩通氣、直接喉鏡、氣管插管與纖維支氣管鏡視野在 OSA 患者皆較困難（詳見 Ch.40 氣道管理，如 [[pediatric-airway-lma|Pediatric Airway / LMA]]）。</li>
+<li>對 <strong>opioid 的呼吸抑制效應更敏感</strong>。</li>
+<li>風險升高：圍術期<strong>氣道阻塞、低血氧、肺不張、肺炎、心血管併發症與住院延長</strong>。</li>
+<li><strong>風險歸因之爭議</strong>：部分世代研究顯示，校正共病（IHD、HF、糖尿病、肥胖）後，已知或篩檢為高風險 OSA 的患者，其死亡率與其他不良術後結果（低血氧、譫妄、心臟併發症）<strong>未必升高</strong>——亦即升高的風險有相當部分來自<strong>伴隨共病</strong>而非 OSA 本身。</li>
+</ul></div></div>
+<h2 id="_4">相關頁面</h2>
 <ul>
 <li><a href="./cerebral-physiology.html" class="wiki-link">Cerebral Physiology and the Effects of Anesthetic Drugs</a>（麻醉藥對 CMR/EEG 的影響）</li>
 <li><a href="./ketamine.html" class="wiki-link">Intravenous Anesthetics（Ketamine）</a></li>
+<li><a href="./inhaled-anesthetics-mechanisms.html" class="wiki-link">Inhaled Anesthetics: Mechanisms of Action</a>（麻醉 vs 睡眠：可喚醒 vs 不可喚醒的意識喪失路徑）</li>
+<li><a href="./autonomic-nervous-system.html" class="wiki-link">Autonomic Nervous System</a>（LC、α₂ 與 flip-flop switch）</li>
 <li><a href="./opioid-receptor-pharmacology.html" class="wiki-link">Opioids</a></li>
 <li><a href="./postoperative-delirium.html" class="wiki-link">Perioperative Neurocognitive Disorders</a>（dexmedetomidine 減少譫妄）</li>
 <li><a href="./ambulatory-anesthesia.html" class="wiki-link">Ambulatory (Outpatient) Anesthesia</a></li>
@@ -108,9 +160,9 @@
   </div>
 </div>
 
-<script>window.WIKI_V="eadd0185";</script>
+<script>window.WIKI_V="3470f809";</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="./assets/wiki.js?v=eadd0185"></script>
-<script src="./assets/search.js?v=eadd0185"></script>
+<script src="./assets/wiki.js?v=3470f809"></script>
+<script src="./assets/search.js?v=3470f809"></script>
 </body>
 </html>
