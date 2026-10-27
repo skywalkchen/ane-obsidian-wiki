@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Anesthesia — 麻醉學 Wiki</title>
+  <link rel="stylesheet" href="./assets/style.css?v=02f67cbf">
+</head>
+<body data-page="pediatric-perioperative-cardiac-arrest">
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand"><a href="./index.html">🫀 麻醉學 Wiki</a></div>
+    <input type="text" id="search-input" placeholder="搜尋頁面…">
+  </div>
+  <div id="tag-panel"></div>
+  <nav id="page-nav"></nav>
+</div>
+
+<div id="main-wrap">
+  <div id="content">
+    <div class="page-meta"><span class="meta-type">concept</span><span class="meta-miller">Miller Ch. 72</span><span class="meta-tag">pediatric</span><span class="meta-tag">critical-care</span><span class="meta-tag">airway</span><span class="meta-tag">miller-ch72</span></div>
+    <h1 id="pediatric-anesthesia">Pediatric Anesthesia</h1>
+<p>小兒圍術期心跳停止（perioperative cardiac arrest）的病因與成人不同，以<strong>心因性</strong>最為常見，其次為<strong>呼吸性</strong>。認識此分布有助於監測重點與緊急處置的優先順序。</p>
+<h2 id="poca-registry">圍術期心跳停止的病因（POCA Registry）</h2>
+<p>根據 <strong>Pediatric Perioperative Cardiac Arrest（POCA）Registry</strong>，兒童圍術期心跳停止最常見的原因為<strong>心臟源性</strong>，依發生頻率遞減排列：</p>
+<table>
+<thead>
+<tr>
+<th>類別</th>
+<th>病因（頻率遞減）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>心因性（最常見）</strong></td>
+<td>低血容量（hypovolemia）→ 心肌缺血（myocardial ischemia）→ 高血鉀（hyperkalemia）→ 突發性心律不整（sudden arrhythmias）</td>
+</tr>
+<tr>
+<td><strong>呼吸性</strong></td>
+<td>喉痙攣（laryngospasm）、氧合不足（inadequate oxygenation）、困難插管（difficult intubation）</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" style="background:#fce4ec;border-left:4px solid #b71c1c"><div class="callout-title" style="color:#b71c1c"><span class="callout-icon">❗</span> 重要</div><div class="callout-body"><ul>
+<li>心跳停止「最常見的即刻原因為<strong>心臟與／或呼吸</strong>」。</li>
+<li>心因性以<strong>低血容量</strong>居首——強調小兒容積狀態與失血評估的重要（見 [[pediatric-blood-volume-mabl]]）。</li>
+<li><strong>高血鉀</strong>為重要可逆病因，須警覺大量輸血、琥珀膽鹼於隱性肌病變、以及惡性高熱（見 [[malignant-hyperthermia]]）。</li>
+</ul></div></div>
+<div class="callout callout-tip" style="background:#f1f8e9;border-left:4px solid #2e7d32"><div class="callout-title" style="color:#2e7d32"><span class="callout-icon">💡</span> 臨床珍珠：監測標準降低了呼吸性重大事件</div><div class="callout-body"><p>根據<strong>封閉式索賠分析（closed claims）</strong>，自<strong>最低監測標準（minimal monitoring standards，脈搏血氧與 capnography）</strong>導入後，導致嚴重呼吸道病損的重大事件已<strong>減少</strong>；此發現並獲大型歐洲小兒麻醉中心佐證。</p></div></div>
+<h2 id="_1">相關頁面</h2>
+<ul>
+<li><a href="./pediatric-airway-lma.html" class="wiki-link">pediatric-airway-lma</a> — 喉痙攣／困難插管等呼吸性病因與小兒氣道處理</li>
+<li><a href="./post-cardiac-arrest-care.html" class="wiki-link">post-cardiac-arrest-care</a> — PALS 小兒心跳停止演算法與停止後照護</li>
+<li><a href="./malignant-hyperthermia.html" class="wiki-link">malignant-hyperthermia</a> — 高血鉀與圍術期心臟停止之可逆病因</li>
+<li><a href="./pediatric-blood-volume-mabl.html" class="wiki-link">pediatric-blood-volume-mabl</a> — 小兒血容量與最大容許失血量（低血容量）</li>
+<li><a href="./perioperative-pulmonary-risk.html" class="wiki-link">perioperative-pulmonary-risk</a> — 呼吸性重大事件風險</li>
+</ul>
+    <div id="backlinks-section">
+      <div class="bl-header">🔗 Backlinks</div>
+      <div id="backlinks-list"></div>
+    </div>
+  </div>
+</div>
+
+<button id="graph-btn" title="顯示關聯圖">◎</button>
+<div id="graph-overlay" class="hidden">
+  <div id="graph-container">
+    <div id="graph-title">Knowledge Graph</div>
+    <button id="graph-close">✕</button>
+    <svg id="graph-svg"></svg>
+    <div id="graph-legend"></div>
+  </div>
+</div>
+
+<script>window.WIKI_V="02f67cbf";</script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./assets/wiki.js?v=02f67cbf"></script>
+<script src="./assets/search.js?v=02f67cbf"></script>
+</body>
+</html>
